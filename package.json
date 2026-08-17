@@ -1,18 +1,7 @@
 {
-  "name": "144burger-landing",
-  "version": "2.0.0",
-  "private": true,
-  "description": "144BURGER — Feito Pra Marcar | Landing Page",
+  "name": "burger144",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Static build complete'"
-  },
-  "keywords": [
-    "144burger",
-    "burger",
-    "diadema",
-    "landing-page"
-  ],
-  "author": "144BURGER",
-  "license": "UNLICENSED"
+    "build": "node -e \"const fs=require('fs'); if(!fs.existsSync('public')) fs.mkdirSync('public'); fs.copyFileSync('index.html','public/index.html'); fs.copyFileSync('styles.css','public/styles.css'); fs.copyFileSync('app.js','public/app.js'); fs.copyFileSync('robots.txt','public/robots.txt'); fs.copyFileSync('sitemap.xml','public/sitemap.xml'); if(!fs.existsSync('public/imagens')) fs.mkdirSync('public/imagens'); fs.readdirSync('imagens').forEach(f=>fs.copyFileSync('imagens/'+f,'public/imagens/'+f));\""
+  }
 }
